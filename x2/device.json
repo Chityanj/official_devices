@@ -1,4 +1,4 @@
-{
+[
     "error": false,
     "donate_url": "https://paypal.me/lucchetto",
     "website_url": "https://revengeos.com/",
@@ -10,4 +10,4 @@
     "url": "https://osdn.net/frs/redir.php?f=%2Fstorage%2Fg%2Fr%2Fre%2Frevengeos%2Fx2%2FRevengeOS-3.2-Q-OFFICIAL-x2-20200712-0806.zip",
     "version": "3.2",
     "filehash": "d0f12163a8510508ba46428c94f36584"
-}
+]

@@ -12,6 +12,7 @@ blocks:
           commands:
             - checkout
             - sudo apt install git -y
+            - sudo apt-get install python3.6
             - sudo pip3 install python-telegram-bot --upgrade
             - 'git clone https://github.com/Chityanj/ota_scripts'
             - bash ota_scripts/helpers/push_helpers.sh

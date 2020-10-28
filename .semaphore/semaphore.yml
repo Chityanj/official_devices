@@ -13,3 +13,13 @@ blocks:
             - checkout
             - sudo apt install git -y
             - sudo pip3 install python-telegram-bot --upgrade
+  - name: send message
+    task:
+      env_vars:
+        - name: BOT_API_TOKEN
+          value: '731390134:AAHzzW-aILiCWcEGitZyo_h0NiglSsQPdTs'
+      jobs:
+        - name: Job
+          commands:
+            - 'git clone https://github.com/Chityanj/ota_scripts.git'
+            - bash ota_scripts/push.sh

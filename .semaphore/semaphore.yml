@@ -17,10 +17,11 @@ blocks:
         - name: 'Job #1'
           commands:
             - checkout
+            - pip3 install python-telegram-bot --upgrade
             - 'git clone https://github.com/Chityanj/ota_scripts'
-            - sh ota_scripts/helpers/latest_device.sh
+            - bassh ota_scripts/helpers/latest_device.sh
             - . ota_scripts/helpers/push_helpers.sh
-            - sh ota_scripts/push.sh
+            - bash ota_scripts/push.sh
       env_vars:
         - name: BOT_API_TOKEN
           value: '731390134:AAHzzW-aILiCWcEGitZyo_h0NiglSsQPdTs'

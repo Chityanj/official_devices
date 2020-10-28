@@ -21,5 +21,6 @@ blocks:
       jobs:
         - name: Job
           commands:
+            - checkout
             - 'git clone https://github.com/Chityanj/ota_scripts.git'
             - bash ota_scripts/push.sh

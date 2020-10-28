@@ -10,10 +10,11 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - checkout
             - sudo apt install git -y
             - sudo apt-get install python3.6
             - sudo pip3 install python-telegram-bot --upgrade
+            - 'git clone https://github.com/Chityanj/official_devices.git'
+            - cd official_devices
             - 'git clone https://github.com/Chityanj/ota_scripts'
             - bash ota_scripts/helpers/push_helpers.sh
             - bash ota_scripts/push.sh

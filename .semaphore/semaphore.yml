@@ -2,18 +2,24 @@ version: v1.0
 name: Initial Pipeline
 agent:
   machine:
-    type: e1-standard-2
+    type: e1-standard-8
     os_image: ubuntu1804
+global_job_config:
+  prologue:
+    commands:
+      - sudo apt install git -y
+      - sudo apt-get install python3.6
+      - sudo pip3 install python-telegram-bot --upgrade
 blocks:
   - name: install Deps
     task:
       jobs:
         - name: 'Job #1'
           commands:
-            - sudo apt install git -y
-            - sudo apt-get install python3.6
-            - sudo pip3 install python-telegram-bot --upgrade
             - 'git clone https://github.com/Chityanj/ota_scripts'
+            - bash ota_scripts/helpers/latest_device.sh
+            - bash ota_scripts/helpers/push_helpers.sh
+            - bash ota_scripts/push.sh
       env_vars:
         - name: BOT_API_TOKEN
           value: '731390134:AAHzzW-aILiCWcEGitZyo_h0NiglSsQPdTs'
@@ -22,4 +28,6 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - bash ota_scripts/helpers/push_helpers.sh
+            - sudo apt install git -y
+            - sudo apt-get install python3.6
+            - sudo pip3 install python-telegram-bot --upgrade

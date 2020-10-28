@@ -12,5 +12,4 @@ blocks:
           commands:
             - checkout
             - sudo apt install git -y
-            - sudo apt install python3-pip -y
             - sudo pip3 install python-telegram-bot --upgrade

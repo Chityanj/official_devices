@@ -16,6 +16,7 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
+            - checkout
             - 'git clone https://github.com/Chityanj/ota_scripts'
             - bash ota_scripts/helpers/push_helpers.sh
             - bash ota_scripts/helpers/latest_device.sh

@@ -18,7 +18,7 @@ blocks:
           commands:
             - 'git clone https://github.com/Chityanj/ota_scripts'
             - bash ota_scripts/helpers/push_helpers.sh
-            - ota_scripts/helpers/push_helpers.sh
+            - bash ota_scripts/helpers/latest_device.sh
             - bash ota_scripts/push.sh
       env_vars:
         - name: BOT_API_TOKEN

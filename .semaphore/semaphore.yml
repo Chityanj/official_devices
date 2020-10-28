@@ -5,9 +5,12 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: 'Block #1'
+  - name: install Deps
     task:
       jobs:
         - name: 'Job #1'
           commands:
             - checkout
+            - apt install git -y
+            - apt install python3-pip -y
+            - pip install python-telegram-bot --upgrade

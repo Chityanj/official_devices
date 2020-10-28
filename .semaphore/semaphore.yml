@@ -2,7 +2,7 @@ version: v1.0
 name: Initial Pipeline
 agent:
   machine:
-    type: e1-standard-8
+    type: e1-standard-2
     os_image: ubuntu1804
 global_job_config:
   prologue:
@@ -23,11 +23,3 @@ blocks:
       env_vars:
         - name: BOT_API_TOKEN
           value: '731390134:AAHzzW-aILiCWcEGitZyo_h0NiglSsQPdTs'
-  - name: 'Block #2'
-    task:
-      jobs:
-        - name: 'Job #1'
-          commands:
-            - sudo apt install git -y
-            - sudo apt-get install python3.6
-            - sudo pip3 install python-telegram-bot --upgrade

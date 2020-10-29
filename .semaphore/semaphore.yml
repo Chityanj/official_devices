@@ -21,7 +21,6 @@ blocks:
             - checkout
             - pip3 install python-telegram-bot --upgrade
             - 'git clone https://github.com/Chityanj/ota_scripts'
-            - 'export TELEGRAM_TOKEN=731390134:AAHzzW-aILiCWcEGitZyo_h0NiglSsQPdTs'
             - bash ota_scripts/helpers/latest_device.sh
             - . ota_scripts/helpers/push_helpers.sh
             - bash ota_scripts/push.sh
